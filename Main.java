@@ -15,7 +15,7 @@ public class Main {
     public void setUpFrame(){
         JFrame f = new JFrame("Swing Template");
         f.setIconImage(new ImageIcon("images/image.png").getImage());
-        f.setSize(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
+        f.setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGHT);
         f.setLayout(null);
 
         f.addMouseListener(mouseListener);
