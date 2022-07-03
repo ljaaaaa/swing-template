@@ -6,7 +6,7 @@ import java.awt.Graphics2D;
 public class MyPanel extends JPanel {
 
     public MyPanel(){
-
+        setBounds(Constants.FRAME_BOUNDS);
     }
 
     @Override
