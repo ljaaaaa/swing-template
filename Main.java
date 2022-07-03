@@ -4,10 +4,12 @@ import javax.swing.JFrame;
 public class Main {
     MyKeyListener keyListener;
     MyMouseListener mouseListener;
+    MyPanel panel;
 
     public Main(){
         keyListener = new MyKeyListener();
         mouseListener = new MyMouseListener();
+        panel = new MyPanel();
 
         setUpFrame();
     }
@@ -22,7 +24,10 @@ public class Main {
 
         f.addKeyListener(keyListener);
         f.setFocusable(true);
-        
+
+        panel.setBounds(0, 0, Constants.FRAME_WIDTH, Constants.FRAME_HEIGHT);
+        f.add(panel);
+
         f.setLocationRelativeTo(null);
         f.setResizable(false);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
