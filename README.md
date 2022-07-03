@@ -1,3 +1,3 @@
-# Swing Template
+# swing-template
 
 Game template for Java
