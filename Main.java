@@ -3,40 +3,40 @@ import javax.swing.JFrame;
 import javax.swing.Timer;
 
 public class Main {
-    	MyKeyListener keyListener;
-    	MyMouseListener mouseListener;
-    	MyActionListener actionListener;
-    	Timer timer;
-    	MyPanel panel;
+	MyKeyListener keyListener;
+	MyMouseListener mouseListener;
+	MyActionListener actionListener;
+	Timer timer;
+	MyPanel panel;
 
-    	public Main(){
-        	keyListener = new MyKeyListener();
-        	mouseListener = new MyMouseListener();
-        	actionListener = new MyActionListener();
-        	timer = new Timer(Constants.DELAY, actionListener);
-        	panel = new MyPanel();
+	public Main(){
+		keyListener = new MyKeyListener();
+		mouseListener = new MyMouseListener();
+		actionListener = new MyActionListener();
+		timer = new Timer(Constants.DELAY, actionListener);
+		panel = new MyPanel();
 
-        	setUpFrame();
-    	}
+		setUpFrame();
+	}
 
-    	public void setUpFrame(){
-        	JFrame f = new JFrame("Swing Template");
-        	f.setIconImage(new ImageIcon("images/image.png").getImage());
-        	f.setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGHT);
-        	f.setLayout(null);
+	public void setUpFrame(){
+		JFrame f = new JFrame("Swing Template");
+		f.setIconImage(new ImageIcon("images/image.png").getImage());
+		f.setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGHT);
+		f.setLayout(null);
 
-        	f.addMouseListener(mouseListener);
+		f.addMouseListener(mouseListener);
 
-        	f.addKeyListener(keyListener);
-        	f.setFocusable(true);
+		f.addKeyListener(keyListener);
+		f.setFocusable(true);
 
-        	f.add(panel);
+		f.add(panel);
 
-        	f.setLocationRelativeTo(null);
-        	f.setResizable(false);
-        	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        	f.setVisible(true);
+		f.setLocationRelativeTo(null);
+		f.setResizable(false);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setVisible(true);
 
-        	timer.start();
-    	}
+		timer.start();
+	}
 }

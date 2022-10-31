@@ -3,12 +3,12 @@ import java.awt.event.ActionEvent;
 
 public class MyActionListener implements ActionListener{
 
-    	public MyActionListener(){
+	public MyActionListener(){
 
-    	}
+	}
 
-    	@Override
-    	public void actionPerformed(ActionEvent e) { 
-  
-    	}
+	@Override
+	public void actionPerformed(ActionEvent e) { 
+
+	}
 }
