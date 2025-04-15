@@ -1,5 +1,7 @@
 #!/bin/sh
 
-javac -d compiled *.java
-cd compiled
-java Run
+if javac -d compiled *.java
+then
+  cd compiled
+  java Run
+fi
